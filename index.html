@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles */
+        .channel:hover {
+            background-color: #f1f1f1;
+        }
+
+        .message:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white p-4 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-semibold">Slack Clone</h1>
+            <!-- Add your user profile and other navigation elements here -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex">
+        <!-- Sidebar (Left) -->
+        <aside class="bg-gray-200 w-1/4 p-4">
+            <!-- Channel list goes here -->
+            <div class="mb-4">
+                <h2 class="text-lg font-semibold mb-2">Channels</h2>
+                <div class="channel p-2 rounded cursor-pointer">
+                    #general
+                </div>
+                <!-- Add more channels as needed -->
+            </div>
+        </aside>
+
+        <!-- Chat Interface (Right) -->
+        <section class="flex-1 p-4">
+            <!-- Chat header (channel name, members, etc.) goes here -->
+            <div class="mb-4">
+                <h2 class="text-2xl font-semibold">#general</h2>
+                <p class="text-gray-500">Members: User1, User2, User3</p>
+            </div>
+
+            <!-- Messages -->
+            <div class="flex-1 overflow-y-auto">
+                <!-- Individual messages go here -->
+                <div class="message p-2 mb-2 rounded">
+                    <strong>User1:</strong> Hello, how are you?
+                </div>
+                <!-- Add more messages as needed -->
+            </div>
+
+            <!-- Message input form -->
+            <div class="mt-4">
+                <input type="text" placeholder="Type your message..." class="w-full p-2 border rounded">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full mt-2">
+                    Send
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white p-4 shadow-md">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Slack Clone. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
